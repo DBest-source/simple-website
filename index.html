@@ -2,72 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Chris | DevOps Engineer</title>
+    <title>D-Best | DevOps Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+        }
+
+        body {
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2, #ff6a88, #ffb347);
+            background-size: 300% 300%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .card {
             background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             text-align: center;
-            max-width: 400px;
+            max-width: 420px;
             width: 90%;
         }
 
         h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2rem;
-            color: #222;
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            color: #333;
         }
 
         h2 {
-            margin: 0 0 1rem 0;
             font-size: 1.2rem;
             font-weight: 500;
-            color: #666;
+            margin-bottom: 1.2rem;
+            color: #667eea;
         }
 
         p {
-            margin: 0;
             font-size: 1rem;
             line-height: 1.6;
-            color: #444;
+            color: #555;
         }
 
         @media (max-width: 480px) {
             .card {
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
 
             h1 {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             h2 {
                 font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.95rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1>Best</h1>
+        <h1>D-Best</h1>
         <h2>DevOps Engineer</h2>
         <p>
-            I am really happy
-
-            Passionate about streamlining processes and creating efficient systems that help teams move faster with confidence.
+            Passionate about automation, reliability, and smooth software delivery. 
+            I enjoy building efficient pipelines, improving system stability, 
+            and creating seamless workflows that empower teams to ship faster with confidence.
         </p>
     </div>
 </body>
