@@ -1,92 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>D-Best | DevOps Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Easter Team</title>
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2, #ff6a88, #ffb347);
-            background-size: 300% 300%;
-            animation: gradientMove 10s ease infinite;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        @keyframes gradientMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    body {
+      background: #f4f6f8;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
 
-        .card {
-            background-color: #ffffff;
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-            text-align: center;
-            max-width: 420px;
-            width: 90%;
-        }
+    /* Faint stars background */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image:
+        radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px),
+        radial-gradient(circle, rgba(0,0,0,0.03) 1px, transparent 1px);
+      background-size: 50px 50px, 90px 90px;
+      z-index: -1;
+    }
 
-        h1 {
-            font-size: 2.4rem;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
+    .wrapper {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 20px;
+    }
 
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin-bottom: 1.2rem;
-            color: #667eea;
-        }
+    .page {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-        }
+    .page-title {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #444;
+    }
 
-        @media (max-width: 480px) {
-            .card {
-                padding: 2rem 1.5rem;
-            }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
 
-            h1 {
-                font-size: 1.8rem;
-            }
+    .tab {
+      padding: 10px 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      color: #fff;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
 
-            h2 {
-                font-size: 1rem;
-            }
+    .tab:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
 
-            p {
-                font-size: 0.95rem;
-            }
-        }
-    </style>
+    .tab.active {
+      outline: 2px solid #333;
+    }
+
+    /* Colorful tabs */
+    .tab:nth-child(1) { background: #6c5ce7; }
+    .tab:nth-child(2) { background: #00b894; }
+    .tab:nth-child(3) { background: #e17055; }
+    .tab:nth-child(4) { background: #0984e3; }
+    .tab:nth-child(5) { background: #fd79a8; }
+    .tab:nth-child(6) { background: #fdcb6e; color: #333; }
+
+    .content {
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: #777;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .music-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 25px;
+      background: #333;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .music-btn:hover {
+      background: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .page {
+        padding: 18px;
+      }
+
+      .tab {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
 </head>
-<body>
-    <div class="card">
-        <h1>D-Best</h1>
-        <h2>DevOps Engineer</h2>
-        <p>
-            Passionate about automation, reliability, and smooth software delivery. 
-            I enjoy building efficient pipelines, improving system stability, 
-            and creating seamless workflows that empower teams to ship faster with confidence.
 
-	    all thanks to Mr. Zolt Tech my Teacher and also Mr. Adetayo love your teachings but calm down o! Thanks
+<body>
+
+  <div class="wrapper">
+
+    <!-- PAGE 1 -->
+    <div class="page">
+      <div class="page-title">Page 1</div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="showContent(0, 'content1', this)">1. Chris</div>
+        <div class="tab" onclick="showContent(1, 'content1', this)">2. Michael</div>
+        <div class="tab" onclick="showContent(2, 'content1', this)">3. Rebecca</div>
+      </div>
+
+      <div class="content" id="content1">
+        <h1>Chris</h1>
+        <h2>DevOps Engineer — United Kingdom</h2>
+        <p>
+          Happy Easter to my amazing group! 🐣✨<br><br>
+          I just want to take a moment to wish everyone a joyful and peaceful Easter celebration.
+          It truly means a lot to be part of this wonderful group. The support, unity, and positive
+          energy we share make it such a special community, and I’m genuinely grateful to belong here.<br><br>
+          A special thank you to General Zolt for the incredible leadership and dedication.
+          Your hard work, commitment, and guidance do not go unnoticed, and we all appreciate everything
+          you do to keep this group strong and moving forward.<br><br>
+          Wishing you all happiness, success, and blessings this Easter and always and always Amen! 🌸🙏
         </p>
+        <a class="music-btn" href="https://youtu.be/fmcbiVz9LPU?si=UUpCo2MdKOAfWf2i" target="_blank">Play Easter Music 🎶</a>
+      </div>
     </div>
+
+    <!-- PAGE 2 -->
+    <div class="page">
+      <div class="page-title">Page 2</div>
+
+      <div class="tabs">
+        <div class="tab active" onclick="showContent(3, 'content2', this)">4. Adatayo</div>
+        <div class="tab" onclick="showContent(4, 'content2', this)">5. Oomotolani</div>
+        <div class="tab" onclick="showContent(5, 'content2', this)">6. General Zolt</div>
+      </div>
+
+      <div class="content" id="content2">
+        <h1>Adatayo</h1>
+        <h2>DevOps Engineer — United Kingdom</h2>
+        <p>
+          Happy Easter to my amazing group! 🐣✨<br><br>
+          I just want to take a moment to wish everyone a joyful and peaceful Easter celebration.
+          It truly means a lot to be part of this wonderful group. The support, unity, and positive
+          energy we share make it such a special community, and I’m genuinely grateful to belong here.<br><br>
+          A special thank you to General Zolt for the incredible leadership and dedication.
+          Your hard work, commitment, and guidance do not go unnoticed, and we all appreciate everything
+          you do to keep this group strong and moving forward.<br><br>
+          Wishing you all happiness, success, and blessings this Easter and always! 🌸🙏
+        </p>
+        <a class="music-btn" href="https://youtu.be/fmcbiVz9LPU?si=UUpCo2MdKOAfWf2i" target="_blank">Play Easter Music 🎶</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const names = ["Chris", "Michael", "Rebecca", "Adatayo", "Oomotolani", "General Zolt"];
+
+    function showContent(index, targetId, el) {
+      const tabs = el.parentElement.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      el.classList.add('active');
+
+      document.getElementById(targetId).innerHTML = `
+        <h1>${names[index]}</h1>
+        <h2>DevOps Engineer — United Kingdom</h2>
+        <p>
+          Happy Easter to my amazing group! 🐣✨<br><br>
+          I just want to take a moment to wish everyone a joyful and peaceful Easter celebration.
+          It truly means a lot to be part of this wonderful group. The support, unity, and positive
+          energy we share make it such a special community, and I’m genuinely grateful to belong here.<br><br>
+          A special thank you to General Zolt for the incredible leadership and dedication.
+          Your hard work, commitment, and guidance do not go unnoticed, and we all appreciate everything
+          you do to keep this group strong and moving forward.<br><br>
+          Wishing you all happiness, success, and blessings this Easter and always! 🌸🙏
+        </p>
+        <a class="music-btn" href="https://youtu.be/fmcbiVz9LPU?si=UUpCo2MdKOAfWf2i" target="_blank">Play Easter Music 🎶</a>
+      `;
+    }
+  </script>
+
 </body>
 </html>
